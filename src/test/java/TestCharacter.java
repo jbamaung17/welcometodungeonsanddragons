@@ -9,7 +9,7 @@ public class TestCharacter {
 
     @Before
     public void before() {
-        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD, 5);
+        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD, 5, 50);
         weapon = new Weapon("Excalibur", WeaponType.SWORD, 10);
     }
 
@@ -53,7 +53,11 @@ public class TestCharacter {
         character.addWeapon(weapon);
         character.addWeapon(weapon);
         assertEquals(5, character.weaponCount());
+    }
 
+    @Test
+    public void characterHasHitPoints() {
+        assertEquals(50, character.getHitPoints());
     }
 
 }

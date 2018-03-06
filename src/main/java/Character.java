@@ -6,13 +6,15 @@ public class Character {
     private CharacterClass characterClass;
     private ArrayList<Weapon> weapons;
     private int capacity;
+    private int hitPoints;
 
-    public Character(String name, Race race, CharacterClass characterClass, int capacity) {
+    public Character(String name, Race race, CharacterClass characterClass, int capacity, int hitPoints) {
         this.name = name;
         this.race = race;
         this.characterClass = characterClass;
         this.weapons = new ArrayList<>();
         this.capacity = capacity;
+        this.hitPoints = hitPoints;
     }
 
     public String getName() {
@@ -38,5 +40,9 @@ public class Character {
 
     public int getCapacity() {
         return this.capacity;
+    }
+
+    public int getHitPoints() {
+        return this.hitPoints;
     }
 }
