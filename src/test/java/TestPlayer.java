@@ -10,7 +10,7 @@ public class TestPlayer {
     @Before
     public void before() {
         player = new Player("Scott");
-        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD);
+        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD, 5);
     }
 
     @Test

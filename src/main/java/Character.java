@@ -5,12 +5,14 @@ public class Character {
     private Race race;
     private CharacterClass characterClass;
     private ArrayList<Weapon> weapons;
+    private int capacity;
 
-    public Character(String name, Race race, CharacterClass characterClass) {
+    public Character(String name, Race race, CharacterClass characterClass, int capacity) {
         this.name = name;
         this.race = race;
         this.characterClass = characterClass;
         this.weapons = new ArrayList<>();
+        this.capacity = capacity;
     }
 
     public String getName() {
@@ -31,5 +33,9 @@ public class Character {
 
     public void addWeapon(Weapon weapon) {
         weapons.add(weapon);
+    }
+
+    public int getCapacity() {
+        return this.capacity;
     }
 }

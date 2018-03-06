@@ -9,7 +9,7 @@ public class TestCharacter {
 
     @Before
     public void before() {
-        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD);
+        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD, 5);
         weapon = new Weapon("Excalibur", WeaponType.SWORD, 10);
     }
 
@@ -37,6 +37,11 @@ public class TestCharacter {
     public void characterCanAddWeapon() {
         character.addWeapon(weapon);
         assertEquals(1, character.weaponCount());
+    }
+
+    @Test
+    public void characterHasMaxCapacityForWeapons() {
+        assertEquals(5, character.getCapacity());
     }
 
 }
