@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Character {
     private String name;
@@ -7,6 +8,7 @@ public class Character {
     private ArrayList<Weapon> weapons;
     private int capacity;
     private int hitPoints;
+    private HashMap<String, Integer> stats;
 
     public Character(String name, Race race, CharacterClass characterClass, int capacity, int hitPoints) {
         this.name = name;
@@ -15,6 +17,7 @@ public class Character {
         this.weapons = new ArrayList<>();
         this.capacity = capacity;
         this.hitPoints = hitPoints;
+        this.stats = new HashMap<>();
     }
 
     public String getName() {
@@ -45,4 +48,13 @@ public class Character {
     public int getHitPoints() {
         return this.hitPoints;
     }
+
+    public void insertStats(String property, Integer value) {
+        stats.put(property, value);
+    }
+
+    public int seeStats(String property) {
+        return stats.get(property);
+    }
+
 }

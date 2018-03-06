@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 
 public class TestCharacter {
@@ -58,6 +60,24 @@ public class TestCharacter {
     @Test
     public void characterHasHitPoints() {
         assertEquals(50, character.getHitPoints());
+    }
+
+    @Test
+    public void characterCanAddStats() {
+        character.insertStats("Strength", 10);
+        character.insertStats("Dexterity", 7);
+        character.insertStats("Constitution", 11);
+        character.insertStats("Intelligence", 19);
+        character.insertStats("Wisdom", 8);
+        character.insertStats("Charisma", 15);
+        character.insertStats("Passive Perception", 20);
+        assertEquals( 10, character.seeStats("Strength"));
+        assertEquals(7, character.seeStats("Dexterity"));
+        assertEquals(11, character.seeStats("Constitution"));
+        assertEquals(19, character.seeStats("Intelligence"));
+        assertEquals(8, character.seeStats("Wisdom"));
+        assertEquals(15, character.seeStats("Charisma"));
+        assertEquals(20, character.seeStats("Passive Perception"));
     }
 
 }
