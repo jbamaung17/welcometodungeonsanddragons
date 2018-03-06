@@ -11,4 +11,12 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    public void addCharacter(Character character) {
+        characters.add(character);
+    }
+
+    public int characterCount() {
+        return characters.size();
+    }
 }
