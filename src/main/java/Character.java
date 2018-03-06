@@ -57,4 +57,8 @@ public class Character {
         return stats.get(property);
     }
 
+    public String walk(Player player) {
+        return "And so " + name + " walked, and as he walked so " + player.getName() + " did describe him walking";
+    }
+
 }

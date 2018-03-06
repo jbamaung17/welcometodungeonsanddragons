@@ -8,11 +8,13 @@ import static org.junit.Assert.assertEquals;
 public class TestCharacter {
     Character character;
     Weapon weapon;
+    Player player;
 
     @Before
     public void before() {
         character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD, 5, 50);
         weapon = new Weapon("Excalibur", WeaponType.SWORD, 10);
+        player = new Player("Scott");
     }
 
     @Test
@@ -78,6 +80,12 @@ public class TestCharacter {
         assertEquals(8, character.seeStats("Wisdom"));
         assertEquals(15, character.seeStats("Charisma"));
         assertEquals(20, character.seeStats("Passive Perception"));
+    }
+
+    @Test
+    public void charactersCanWalk() {
+        player.addCharacter(character);
+        assertEquals("And so Sing-song man walked, and as he walked so Scott did describe him walking", character.walk(player));
     }
 
 }
