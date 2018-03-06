@@ -15,5 +15,10 @@ public class TestDragon {
     public void dragonHasName() {
         assertEquals("Puff", dragon.getName());
     }
+
+    @Test
+    public void dragonHasSpecies() {
+        assertEquals(Species.DRAGON, dragon.getSpecies() );
+    }
 }
 
