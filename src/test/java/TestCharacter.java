@@ -88,4 +88,12 @@ public class TestCharacter {
         assertEquals("And so Sing-song man walked, and as he walked so Scott did describe him walking", character.walk(player));
     }
 
+    @Test
+    public void charactersCanFightMelee() {
+        player.addCharacter(character);
+        character.addWeapon(weapon);
+        assertEquals("Sing-song man swings Excalibur and does 10 damage.", character.meleeAttack());
+    }
+
+
 }

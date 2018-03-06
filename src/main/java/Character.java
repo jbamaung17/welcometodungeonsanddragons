@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Character {
+public class Character implements IMeleeAttack {
     private String name;
     private Race race;
     private CharacterClass characterClass;
@@ -61,4 +61,8 @@ public class Character {
         return "And so " + name + " walked, and as he walked so " + player.getName() + " did describe him walking";
     }
 
+    @Override
+    public String meleeAttack() {
+        return this.name + " swings " + weapons.get(0).getName() + " and does " + weapons.get(0).getDamage() + " damage.";
+    }
 }
