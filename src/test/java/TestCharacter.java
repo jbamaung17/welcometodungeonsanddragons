@@ -5,10 +5,12 @@ import static org.junit.Assert.assertEquals;
 
 public class TestCharacter {
     Character character;
+    Weapon weapon;
 
     @Before
     public void before() {
-        character = new Character("Sing-song man", Race.HUMAN);
+        character = new Character("Sing-song man", Race.HUMAN, CharacterClass.BARD);
+        weapon = new Weapon("Excalibur", WeaponType.SWORD, 10);
     }
 
     @Test
@@ -21,5 +23,20 @@ public class TestCharacter {
         assertEquals(Race.HUMAN, character.getRace());
     }
 
+    @Test
+    public void characterHasClass() {
+        assertEquals(CharacterClass.BARD, character.getCharacterClass());
+    }
+
+    @Test
+    public void weaponsArrayStartsAtZero() {
+        assertEquals(0, character.weaponCount() );
+    }
+
+    @Test
+    public void characterCanAddWeapon() {
+        character.addWeapon(weapon);
+        assertEquals(1, character.weaponCount());
+    }
 
 }

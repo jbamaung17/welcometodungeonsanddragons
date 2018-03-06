@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
-
 public enum WeaponType {
+    SWORD,
+    BOW,
+    AXE,
+    STAFF
 }
