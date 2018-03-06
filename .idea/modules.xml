@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WelcomeToDungeonsAndDragons.iml" filepath="$PROJECT_DIR$/.idea/modules/WelcomeToDungeonsAndDragons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WelcomeToDungeonsAndDragons_main.iml" filepath="$PROJECT_DIR$/.idea/modules/WelcomeToDungeonsAndDragons_main.iml" group="WelcomeToDungeonsAndDragons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WelcomeToDungeonsAndDragons_test.iml" filepath="$PROJECT_DIR$/.idea/modules/WelcomeToDungeonsAndDragons_test.iml" group="WelcomeToDungeonsAndDragons" />
+    </modules>
+  </component>
+</project>
