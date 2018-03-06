@@ -32,6 +32,7 @@ public class Character {
     }
 
     public void addWeapon(Weapon weapon) {
+        if (this.weaponCount() < this.capacity)
         weapons.add(weapon);
     }
 

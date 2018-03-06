@@ -44,4 +44,16 @@ public class TestCharacter {
         assertEquals(5, character.getCapacity());
     }
 
+    @Test
+    public void characterCannotGoOverCapacity() {
+        character.addWeapon(weapon);
+        character.addWeapon(weapon);
+        character.addWeapon(weapon);
+        character.addWeapon(weapon);
+        character.addWeapon(weapon);
+        character.addWeapon(weapon);
+        assertEquals(5, character.weaponCount());
+
+    }
+
 }
