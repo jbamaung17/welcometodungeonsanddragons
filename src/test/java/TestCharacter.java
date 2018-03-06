@@ -8,7 +8,7 @@ public class TestCharacter {
 
     @Before
     public void before() {
-        character = new Character("Sing-song man");
+        character = new Character("Sing-song man", Race.HUMAN);
     }
 
     @Test
@@ -18,6 +18,8 @@ public class TestCharacter {
 
     @Test
     public void characterHasRace() {
-        assertEquals("Human", character.getRace());
+        assertEquals(Race.HUMAN, character.getRace());
     }
+
+
 }

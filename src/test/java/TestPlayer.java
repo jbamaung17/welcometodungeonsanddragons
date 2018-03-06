@@ -10,12 +10,17 @@ public class TestPlayer {
     @Before
     public void before() {
         player = new Player("Scott");
-        character = new Character("Sing-song man");
+        character = new Character("Sing-song man", Race.HUMAN);
     }
 
     @Test
     public void playerHasName() {
         assertEquals("Scott", player.getName());
+    }
+
+    @Test
+    public void playerCharactersStartAtZero() {
+        assertEquals(0, player.characterCount());
     }
 
     @Test
